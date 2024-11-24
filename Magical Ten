@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    int maxQuality = -1;
+    int winnerIndex = -1; 
+
+    for (int i = 1; i <= n; i++) {
+        int Ai, Bi; 
+        scanf("%d %d", &Ai, &Bi);
+
+       
+        if (Ai <= 10 && Bi > maxQuality) {
+            maxQuality = Bi;
+            winnerIndex = i;
+        }
+    }
+
+    
+    printf("%d\n", winnerIndex);
+
+    return 0;
+}
